@@ -1,0 +1,20 @@
+body {
+    font-size: 16px;
+}
+
+header, main, footer {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+header, footer {
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: lightblue;
+}
+
+header img {
+    float: right;
+    width: 200px;
+    height: auto;
+}
