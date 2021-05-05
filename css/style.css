@@ -11,9 +11,19 @@ header, footer {
     border: 1px solid #bbb;
     padding: 1rem;
     background-color: lightblue;
+    text-align: center;
+}
+
+footer p.update {
+    color: yellow;
+    font-size: 85%;
 }
 
 header img {
     width: 200px;
     height: auto;
+}
+
+main h2 {
+    border-bottom: 1px solid black;
 }
