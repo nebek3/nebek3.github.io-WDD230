@@ -19,6 +19,10 @@ main {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main h2 {
+    font-family: 'Special Elite', cursive;
+}
+
 footer p.update {
     color: yellow;
     font-size: 85%;
