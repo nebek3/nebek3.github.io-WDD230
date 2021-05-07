@@ -12,6 +12,11 @@ header, footer {
     padding: 1rem;
     background-color: lightblue;
     text-align: center;
+    font-family: 'Special Elite', cursive;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer p.update {
