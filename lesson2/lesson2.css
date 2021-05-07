@@ -1,0 +1,62 @@
+body {
+    font-size: 16px;
+}
+
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header, footer {
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: lightblue;
+    text-align: center;
+}
+
+footer p.update {
+    color: yellow;
+    font-size: 85%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+section {
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: lightblue;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+img {
+    width: 15em;
+}
+
+
+@media only screen and (min-width: 37.5em) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+
+@media only screen and (min-width: 60em) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section:nth-child(3) {
+        grid-column: span 1;
+    }
+}
+
+
+
