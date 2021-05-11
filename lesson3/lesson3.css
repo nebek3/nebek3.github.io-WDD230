@@ -1,0 +1,79 @@
+html {
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+}
+body {
+    font-size: 16px;
+    font-family: 'Special Elite', cursive;
+}
+header {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    color: skyblue;
+}
+nav {
+    background-color: lawngreen;
+    padding: 0.5rem;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    flex: 1 1 100%;
+    text-align: center;
+}
+nav a {
+    color: black;
+}
+nav a:hover {
+    color: lawngreen;
+    background-color: skyblue;
+    padding: 0.5rem;
+}
+nav li.active a{
+    color: lightslategray;
+    padding: 0.5rem;
+}
+main {
+    padding: 0 3%;
+    min-height: 10rem;
+}
+footer {
+    background-color: lawngreen;
+    color: black;
+    padding: .3rem;
+    text-align: center;
+}
+p.update {
+    font-size: 85%;
+}
+h1 {
+    color: skyblue;
+}
+.colors {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.colors th {
+    background-color: rgb(255, 255, 255);
+}
+.colors td {
+    max-width: 20%;
+    height: 3rem;
+}
+.color1 {
+    background-color: skyblue;
+}
+.color2 {
+    background-color: lawngreen;
+}
+.color3 {
+    background-color: lightslategray;
+}
