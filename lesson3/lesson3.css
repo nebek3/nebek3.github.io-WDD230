@@ -7,6 +7,9 @@ body {
     font-size: 16px;
     font-family: 'Special Elite', cursive;
 }
+main p, ul {
+    font-family: Josefine Slab;
+}
 header {
     margin: 0;
     background-color: rgb(255, 255, 255);
