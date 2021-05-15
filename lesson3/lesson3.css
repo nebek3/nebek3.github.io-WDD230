@@ -22,13 +22,13 @@ nav {
     background-color: lightgreen;
     padding: 0rem;
     text-align: center;
-    max-width: 700px;
     margin: auto;
     text-align: center;
 }
 nav ul {
     list-style-type: none;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));*/
     padding: 0;
     margin: 0;
     display: grid;
