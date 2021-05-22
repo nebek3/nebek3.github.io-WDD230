@@ -50,6 +50,9 @@ nav li.active a{
     background-color: slategray;
     padding: 0.5rem;
 }
+nav ul.hide {
+    display: none;
+}
 .navigation li:first-child {
     display: block;
 }
@@ -80,6 +83,39 @@ p.update {
 h1 {
     color: skyblue;
 }
+.heroDiv {
+    position: relative;
+    width: 100%;
+}
+.hero img {
+    margin: 10px auto;
+    width: 100%;
+    padding: 0;
+}
+.weatherSummary {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background: radial-gradient(white, lightblue);
+    padding: 1rem;
+    box-shadow: 0 0 15px;
+    opacity: .9;
+    text-align: center;
+}
+.fiveday {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.forecast {
+    display: none;
+}
+.article img {
+    margin: 10px auto;
+    width: 100%;
+    padding: 0;
+}
 
 @media only screen and (min-width: 600px) {
     body {
@@ -94,5 +130,14 @@ h1 {
     .navigation li {
         display: block;
         /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    }
+    .forecast {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .forecast img {
+        margin: 10px auto;
+        width: 100%;
+        padding: 0;
     }
 }
