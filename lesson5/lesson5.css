@@ -1,0 +1,98 @@
+html {
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+}
+body {
+    font-size: 14px;
+    font-family: 'Special Elite', cursive;
+}
+main p, ul {
+    font-family: 'Josefine Slab', serif;
+}
+header {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    color: skyblue;
+}
+nav button {
+    margin: 0.2rem 2%;
+    background-color: transparent;
+    border: none;
+}
+nav {
+    background-color: lightgreen;
+    text-align: center;
+    margin: auto;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    flex: 1 1 100%;
+}
+nav ul li a {
+	padding: 0.5rem;
+	text-decoration: none;
+	font-size: 0.95rem;
+    display: block;
+    }
+nav a:hover {
+    color: lightgreen;
+    background-color: slategray;
+    padding: 0.5rem;
+}
+nav li.active a{
+    color: skyblue;
+    background-color: slategray;
+    padding: 0.5rem;
+}
+.navigation li:first-child {
+    display: block;
+}
+.navigation li {
+    display: none;
+}
+.responsive li {
+    display: block;
+}
+main {
+    padding: 0 3%;
+    min-height: 10rem;
+}
+main div {
+    background-color: skyblue;
+    padding: 2rem;
+    margin: 1rem;
+}
+footer {
+    background-color: lightgreen;
+    color: black;
+    padding: .3rem;
+    text-align: center;
+}
+p.update {
+    font-size: 85%;
+}
+h1 {
+    color: skyblue;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    .navigation {
+        display: flex;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    .navigation li {
+        display: block;
+        /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    }
+}
