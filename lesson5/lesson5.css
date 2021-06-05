@@ -6,6 +6,7 @@ html {
 body {
     font-size: 14px;
     font-family: 'Special Elite', cursive;
+   
 }
 main p, ul {
     font-family: 'Josefine Slab', serif;
@@ -47,7 +48,7 @@ nav a:hover {
 }
 nav li.active a{
     color: skyblue;
-    background-color: slategray;
+    background: radial-gradient(slategray, lightgreen);
     padding: 0.5rem;
 }
 nav ul.hide {
@@ -85,11 +86,15 @@ h1 {
 }
 .heroDiv {
     position: relative;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
-.hero img {
-    margin: 10px auto;
-    width: 100%;
+#main_image {
+    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     padding: 0;
 }
 .weatherSummary {
@@ -110,6 +115,7 @@ h1 {
 }
 .forecast {
     display: none;
+    
 }
 .article {
     position: relative;
@@ -137,7 +143,13 @@ h1 {
     }
     .forecast {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        width: 600px;
+    }
+
+    .forecast_column
+    {
+      
     }
     .forecast img {
         margin: 10px auto;
