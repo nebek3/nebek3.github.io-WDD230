@@ -35,7 +35,12 @@
 
             <h1>Preston</h1>
             <div class="heroDiv">
-                <img src="images/hero-small.jpg" id="main_image" alt="Sailboat on the Lake">
+                <picture>
+                    <source srcset="images/hero-large.jpg" media="(min-width: 1000px)">
+                    <source srcset="images/hero-medium.jpg" media="(min-width: 600px)">
+                    <source srcset="images/hero-small.jpg" media="(min-width: 300px)">
+                    <img src="images/hero-small.jpg" id="main_image" alt="Sunny Picture">
+                </picture>
                 <section class="weatherSummary">
                     <h3>Weather Summmary</h3>
                         <p class="left" style="margin-top: 0;">Currently:</p>
