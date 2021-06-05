@@ -9,19 +9,21 @@
         <link rel="stylesheet" href="lesson6.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
-        <title></title>
+        <title>WDD Preston</title>
     </head>
     <body>
         <header>
-            <img class="logo" src="lesson5/images/logo.png" alt="Weather Detrimental Determination">
-            <h1>WDD</h1>
-            <h2>Weather's Detrimental Determination</h2>
+            <img class="logo" src="/lesson6/images/logo.png" alt="Weather Detrimental Determination">
+            <div>
+                <h1>WDD</h1>
+                <h2>Weather's Detrimental Determination</h2>
+            </div>
         </header>
         <nav>
             <ul class="navigation">
                 <li><a href="" onclick="toggleMenu()">&#9776; Menu</a></li>
                 <li><a href="">Home</a></li>
-                <li><a href="">Preston</a></li>
+                <li class="active"><a href="">Preston</a></li>
                 <li><a href="">Soda Springs</a></li>
                 <li><a href="">Fish Haven</a></li>
                 <li><a href="">Storm Center</a></li>
@@ -29,17 +31,26 @@
             </ul>
         </nav>
         <main>
+            <banner>Pancakes at the park! Come and enjoy! </banner>
+
             <h1>Preston</h1>
             <div class="heroDiv">
-                <div class="hero"><img src="images/lightningboat.jpg"></div>
+                <img src="images/lightningboat.jpg" id="main_image" alt="Sailboat on the Lake">
                 <section class="weatherSummary">
                     <h3>Weather Summmary</h3>
-                        <p>Label: Info</p>
-                        <p>Label: Info</p>
-                        <p>Label: Info</p>
-                        <p>Label: Info</p>
+                        <p class="left" style="margin-top: 0;">Currently:</p>
+                        <p class="left">High:</p>
+                        <p class="left">Wind Chill:</p>
+                        <p class="left">Humidity:</p>
+                        <p class="left">Wind Speed:</p>
+                        <p class="right"> Sunny</p>
+                        <p class="right"> 76 &degF</p>
+                        <p class="right"> &degF</p>
+                        <p class="right"> 69%</p>
+                        <p class="right"> 5 mph</p>
                 </section>
             </div>
+            
             <div class="fiveday">
                 <h2>5 Day Forecast</h2>
                 <section class="forecast">
@@ -75,10 +86,14 @@
                 <div class="article">
                     <h3>Windy Weather</h3>
                     <h5>By Wally Walden</h5>
-                    <p>Weather welcomes Wally with Wendy when we wander with weekend wishes.</p>
-                    <div>map and phone number</div>
+                    <p>Mei ut dico graeco fabulas, ea volumus qualisque usu. Est dicam quidam efficiendi ei,
+                         et sed amet corrumpit maiestatis. Amet perfecto ad vim, moderatius mediocritatem at 
+                         nam, ullum insolens an sit. Ne mutat repudiandae sed. Cu probo dolorum ius, per at 
+                         affert libris maiestatis. Ad ius eros ipsum, te quod dicit mel, unum ceteros urbanitas 
+                         vel ex.</p>
                 </div>
             </section>
+            <div id="contact"> map image, name, address, phone number, email address, social media pages with icon images (twitter, facebook etc.)</div>
         </main>
         <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
             <p class="update">Last Modified: <span id="lastmod"></span></p>
@@ -87,5 +102,4 @@
         </body>
 </html>
 <!--I got this Nav bar to display the way I wanted it to with "display: block;". Last week I did it with "grid-template-columns: .....;"-->
-<!--Image still not displayed-->
 <!--Why does the menu in small/mobile view briefly open and not stay open-->
