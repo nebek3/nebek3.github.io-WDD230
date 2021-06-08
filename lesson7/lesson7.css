@@ -1,0 +1,190 @@
+html {
+    display: block;
+    /*max-width: 960px;*/
+    margin: 0;
+}
+body {
+    font-size: 14px;
+    font-family: 'Special Elite', cursive;
+   
+}
+main p, ul {
+    font-family: 'Josefine Slab', serif;
+}
+header {
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    color: skyblue;
+}
+header h2 {
+    font-size: 1.2rem;
+}
+nav button {
+    margin: 0.2rem 2%;
+    background-color: transparent;
+    border: none;
+}
+nav {
+    background-color: lightgreen;
+    text-align: center;
+    margin: auto;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    flex: 1 1 100%;
+}
+nav ul li a {
+	padding: 0.5rem;
+	text-decoration: none;
+	font-size: 0.95rem;
+    display: block;
+    }
+nav a:hover {
+    color: lightgreen;
+    background-color: slategray;
+    padding: 0.5rem;
+}
+nav li.active a{
+    color: skyblue;
+    background: radial-gradient(slategray, lightgreen);
+    padding: 0.5rem;
+}
+nav ul.hide {
+    display: none;
+}
+.navigation li:first-child {
+    display: block;
+}
+.navigation li {
+    display: none;
+}
+.responsive li {
+    display: block;
+}
+main {
+    padding: 0 3%;
+    min-height: 10rem;
+}
+main div {
+    background-color: skyblue;
+    padding: 2rem;
+    margin: 1rem;
+}
+banner {
+    display: none;
+    background-color: yellow;
+    text-align: center;
+    font-size: 20px;
+}
+footer {
+    background-color: lightgreen;
+    color: black;
+    padding: .3rem;
+    text-align: center;
+}
+p.update {
+    font-size: 85%;
+}
+main h1 {
+    color: skyblue;
+    text-align: center;
+}
+.heroDiv {
+    position: relative;
+    padding: 0;
+    border-radius: 20px;
+}
+#main_image {
+    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0;
+    border-radius: 20px;
+}
+.weatherSummary {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background: radial-gradient(white, lightblue);
+    padding: 1rem;
+    box-shadow: 0 0 15px;
+    opacity: .7;
+    border-radius: 20px;
+    column-count: 2;
+}
+.weatherSummary h3 {
+    column-span: all;
+}
+.weatherSummary .left {
+    text-align: right;
+}
+.weatherSummary .right {
+    text-align: left;
+}
+.weatherSummary p {
+    margin: 3px 0;
+}
+.fiveday {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.forecast {
+    display: none;
+    
+}
+.article {
+    position: relative;
+    border-radius: 20px;
+}
+.article p {
+    width: 55%;
+}
+.article picture {
+    position: absolute;
+    right: 15px;
+    width: 40%;
+    padding: 0;
+    z-index: 1;
+    border-radius: 20px;
+}
+#contact {
+    border-radius: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    .navigation {
+        display: flex;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    .navigation li {
+        display: block;
+        /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    }
+    .forecast div {
+        padding: 0;
+        margin: 0;
+    }
+    .forecast {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .forecast img {
+        margin: 10px auto;
+        width: 100%;
+        padding: 0;
+    }
+}

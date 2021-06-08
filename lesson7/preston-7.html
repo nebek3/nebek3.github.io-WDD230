@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta name="description"
+            content="Preston Town Page"/>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="lesson7.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
+        <title>WDD Preston</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/lesson7/images/logo.png" alt="Weather Detrimental Determination">
+            <div>
+                <h1>WDD</h1>
+                <h2>Weather's Detrimental Determination</h2>
+            </div>
+        </header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="">Home</a></li>
+                <li class="active"><a href="">Preston</a></li>
+                <li><a href="">Soda Springs</a></li>
+                <li><a href="">Fish Haven</a></li>
+                <li><a href="">Storm Center</a></li>
+                <li><a href="">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <banner>Pancakes at the park! Come and enjoy! </banner>
+
+            <h1>Preston</h1>
+            <div class="heroDiv">
+                <picture>
+                    <source srcset="images/lightningboatlarge.jpg" media="(min-width: 1000px)">
+                    <source srcset="images/lightningboatmedium.jpg" media="(min-width: 600px)">
+                    <source srcset="images/lightningboatsmall.jpg" media="(min-width: 300px)">
+                    <img src="images/hero-small.jpg" id="main_image" alt="Sailboat and Lighnting">
+                </picture>
+                <section class="weatherSummary">
+                    <h3>Weather Summmary</h3>
+                        <p class="left" style="margin-top: 0;">Currently:</p>
+                        <p class="left">High:</p>
+                        <p class="left">Wind Chill:</p>
+                        <p class="left">Humidity:</p>
+                        <p class="left">Wind Speed:</p>
+                        <p class="right"> Sunny</p>
+                        <p class="right"> <span id="temp">76</span> &degF</p>
+                        <p class="right"> &degF</p>
+                        <p class="right"> 69%</p>
+                        <p class="right"> <span id="wind">5</span> mph</p>
+                </section>
+            </div>
+            
+            <div class="fiveday">
+                <h2>5 Day Forecast</h2>
+                <section class="forecast">
+                    <div>
+                        <h5>Monday</h5>
+                        <img src="images/sun.png" alt="sun">
+                        <p>65&deg;</p>
+                    </div>
+                    <div>
+                        <h5>Tuesday</h5>
+                        <img src="images/sun.png" alt="sun">
+                        <p>60&deg;</p>
+                    </div>
+                    <div>
+                        <h5>Wednesday</h5>
+                        <img src="images/rain.png" alt="rain">
+                        <p>46&deg;</p>
+                    </div>
+                    <div>
+                        <h5>Thursday</h5>
+                        <img src="images/rain.png" alt="rain">
+                        <p>48&deg;</p>
+                    </div>
+                    <div>
+                        <h5>Friday</h5>
+                        <img src="images/sun.png" alt="sun">
+                        <p>64&deg;</p>
+                    </div>
+                </section>
+            </div>
+            <section class="article">
+                <picture>
+                    <source srcset="images/twisterlarge.jpg" media="(min-width: 1000px)">
+                    <source srcset="images/twistermedium.jpg" media="(min-width: 600px)">
+                    <source srcset="images/twistersmall.jpg" media="(min-width: 300px)">
+                    <img src="images/twistersmall.jpg" id="main_image" alt="Twister">
+                </picture>
+                <div class="article">
+                    <h3>Windy Weather</h3>
+                    <h5>By Wally Walden</h5>
+                    <p>Mei ut dico graeco fabulas, ea volumus qualisque usu. Est dicam quidam efficiendi ei,
+                         et sed amet corrumpit maiestatis. Amet perfecto ad vim, moderatius mediocritatem at 
+                         nam, ullum insolens an sit. Ne mutat repudiandae sed. Cu probo dolorum ius, per at 
+                         affert libris maiestatis. Ad ius eros ipsum, te quod dicit mel, unum ceteros urbanitas 
+                         vel ex.</p>
+                </div>
+            </section>
+            <div id="contact"> map image, name, address, phone number, email address, social media pages with icon images (twitter, facebook etc.)</div>
+        </main>
+        <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
+            <p class="update">Last Modified: <span id="lastmod"></span></p>
+        </footer>
+        <script src="lesson7.js"></script>
+        <script src="windchill.js"></script>
+        </body>
+</html>
+<!--I got this Nav bar to display the way I wanted it to with "display: block;". Last week I did it with "grid-template-columns: .....;"-->
+<!--Why does the menu in small/mobile view briefly open and not stay open-->
