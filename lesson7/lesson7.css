@@ -1,4 +1,5 @@
 html {
+    background-color: blue;
     display: block;
     /*max-width: 960px;*/
     margin: 0;
@@ -172,7 +173,14 @@ main h1 {
     width: 100%;
 }
 
+
+
+
+
 @media only screen and (min-width: 500px) {
+    html {
+        background-color: red;
+    }
     .navigation {
         display: flex;
     }
@@ -181,17 +189,23 @@ main h1 {
     }
     .navigation li {
         display: block;
+    }
     #gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 
+
+
+
+
 @media only screen and (min-width: 700px) {
+    html {
+        background-color: black;
+    }
     body {
         font-size: 16px;
-    }
-
     }
     .forecast div {
         padding: 0;
