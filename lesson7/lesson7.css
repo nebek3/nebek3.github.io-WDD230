@@ -167,6 +167,7 @@ main h1 {
 #gallery div {
     padding: 0;
     margin: 10px;
+    border-radius: 20px;
 }
 #gallery img {
     margin: 10px auto;
