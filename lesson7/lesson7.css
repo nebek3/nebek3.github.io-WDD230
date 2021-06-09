@@ -159,11 +159,20 @@ main h1 {
 #contact {
     border-radius: 20px;
 }
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#gallery div {
+    padding: 0;
+    margin: 10px;
+}
+#gallery img {
+    margin: 10px auto;
+    width: 100%;
+}
 
-@media only screen and (min-width: 600px) {
-    body {
-        font-size: 16px;
-    }
+@media only screen and (min-width: 500px) {
     .navigation {
         display: flex;
     }
@@ -172,7 +181,17 @@ main h1 {
     }
     .navigation li {
         display: block;
-        /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        font-size: 16px;
+    }
+
     }
     .forecast div {
         padding: 0;
@@ -186,5 +205,9 @@ main h1 {
         margin: 10px auto;
         width: 100%;
         padding: 0;
+    }
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
