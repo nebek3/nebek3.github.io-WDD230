@@ -45,12 +45,12 @@ imagesToLoad.forEach((img) => {
     loadImages(img);
 });
 
-article img[data-src] {
-    filter: blur(0.2em);
+img[data-src] {
+    filter: blur(0.2);
 }
 
-article img {
-    filter: blur(0.0em);
+img {
+    filter: blur(0.0);
     transition: filter 0.5s;
 }
 
