@@ -137,7 +137,7 @@ main h1 {
     font-size: 20px;
     border-radius: 20px;
 }
-.forecast {
+.fiveday {
     display: none;
     
 }
@@ -173,6 +173,9 @@ main h1 {
     .navigation li {
         display: block;
         /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    }
+    .fiveday {
+        display: block;
     }
     .forecast div {
         padding: 0;
