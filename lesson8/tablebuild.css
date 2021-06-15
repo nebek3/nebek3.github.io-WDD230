@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
 html {
     font-family: Ubuntu, sans-serif;
   }
@@ -5,21 +7,19 @@ html {
 table {
     border-collapse: collapse;
     border: 2px solid rgb(200,200,200);
-    letter-spacing: 1px;
-    font-size: 0.8rem;
     margin: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    box-shadow: 10px 10px 10px #628ca6;
 }
   
 td, th {
     border: 1px solid #7fb9c2;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
   
 th {
     background-color: #628ca6;
     color: white;
+    font-weight: 800;
 }
   
 td {
@@ -33,14 +33,16 @@ tr:nth-child(even) td {
 tr:nth-child(odd) td {
     background-color: #e7ffed;
 }
-  
-thead, tfoot {
-    background-color: #7fb9c2;
-}
 
 thead {
     font-size: 2rem;
     font-weight: 700;
+    background-color: #7fb9c2;
+}
+
+tfoot {
+    display: table-footer-group;
+    background-color: #7fb9c2;
 }
 
 .bold {
