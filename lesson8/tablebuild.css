@@ -3,49 +3,46 @@
 html {
     font-family: Ubuntu, sans-serif;
   }
-  
+
 table {
     border-collapse: collapse;
     border: 2px solid rgb(200,200,200);
     margin: auto;
     box-shadow: 10px 10px 10px #628ca6;
 }
-  
+
 td, th {
     border: 1px solid #7fb9c2;
     padding: 10px 10px;
-}
-  
-th {
-    background-color: #628ca6;
-    color: white;
-    font-weight: 800;
-}
-  
-td {
     text-align: center;
 }
-  
-tr:nth-child(even) td {
-    background-color: #e7f0ed;
-}
-  
-tr:nth-child(odd) td {
-    background-color: #e7ffed;
+
+thead, tfoot {
+    background-color: #7fb9c2;
 }
 
 thead {
     font-size: 2rem;
     font-weight: 700;
-    background-color: #7fb9c2;
 }
 
 tfoot {
-    display: table-footer-group;
-    background-color: #7fb9c2;
+    font-size: .8rem;
 }
 
-.bold {
+tbody th, .bold {
     background-color: #628ca6;
     color: white;
+}
+
+th {
+    font-weight: 800;
+}
+
+tr :nth-child(even) td {
+    background-color: #e7f0ed;
+}
+
+tr :nth-child(odd) td {
+    background-color: #e7ffed;
 }
