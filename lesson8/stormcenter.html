@@ -32,23 +32,22 @@
         </nav>
         <main>
 
-            <h1>Course Proposal Application</h1>
+            <h1>Storm Center</h1>
 
             <form method="GET" action="thanks.html">
                 <fieldset>
-                    <legend>Applicant Information</legend>
-                    <label class="top">First Name* <input type="text" name="fname" required></label>
-                    <label class="top">Last Name* <input type="text" name="lname" required></label>
-                    <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234"></label>
-                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                    <label class="top">Website <input type="url" name="url" placeholder="http://" required></label>
+                    <legend>Personal Information</legend>
+                    <label class="top">Full Name* <input type="text" name="name" pattern="[A-Za-z]{5}" required></label>
+                    <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
+                    <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                    <label class="top">ZIP Code* <input type="number" name="ZIP" required></label>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Course Information</legend>
+                    <legend>Storm Information</legend>
                     <div>Audience</div>
-                    <label class="sbs"><input type="radio" name="audience" value="beginner"> Beginner</label>
-                    <label class="sbs"><input type="radio" name="audience" value="intermediate"> Intermediate</label>
+                    <label class="sbs">Storm Date <input type="date" name="date"></label>
+                    <label class="sbs">Storm Type <input type="list" name="type"></label>
                     <label class="sbs"><input type="radio" name="audience" value="advanced"> Advanced</label>
 
                     <div>Software Needed</div>
