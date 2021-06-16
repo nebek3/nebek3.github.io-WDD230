@@ -30,7 +30,7 @@ tfoot {
     font-size: .8rem;
 }
 
-tbody th, .bold {
+tbody th {
     background-color: #628ca6;
     color: white;
 }
@@ -39,10 +39,15 @@ th {
     font-weight: 800;
 }
 
-tr :nth-child(even) td {
+tbody tr:nth-child(even) td {
     background-color: #e7f0ed;
 }
 
-tr :nth-child(odd) td {
+tbody tr:nth-child(odd) td {
     background-color: #e7ffed;
+}
+
+tbody tr td.bold {
+    background-color: #628ca6;
+    color: white;
 }
