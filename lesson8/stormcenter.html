@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta name="description"
+            content="Preston Town Page"/>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="lesson8.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
+        <title>WDD Preston</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/lesson7/images/logo.png" alt="Weather Detrimental Determination">
+            <div>
+                <h1>WDD</h1>
+                <h2>Weather's Detrimental Determination</h2>
+            </div>
+        </header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Preston</a></li>
+                <li><a href="">Soda Springs</a></li>
+                <li><a href="">Fish Haven</a></li>
+                <li class="active"><a href="">Storm Center</a></li>
+                <li><a href="">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+
+            <h1>Course Proposal Application</h1>
+
+            <form method="GET" action="thanks.html">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label class="top">First Name* <input type="text" name="fname" required></label>
+                    <label class="top">Last Name* <input type="text" name="lname" required></label>
+                    <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label class="top">Website <input type="url" name="url" placeholder="http://" required></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Course Information</legend>
+                    <div>Audience</div>
+                    <label class="sbs"><input type="radio" name="audience" value="beginner"> Beginner</label>
+                    <label class="sbs"><input type="radio" name="audience" value="intermediate"> Intermediate</label>
+                    <label class="sbs"><input type="radio" name="audience" value="advanced"> Advanced</label>
+
+                    <div>Software Needed</div>
+                    <label class="sbs"><input type="checkbox" name="editing" value="yes"> Photo Editing</label>
+                    <label class="sbs"><input type="checkbox" name="code" value="yes"> Coding</label>
+                    <label class="sbs"><input type="checkbox" name="process" value="yes"> Preprocessor</label>
+                    <label class="sbs"><input type="checkbox" name="client" value="yes"> FTP Client</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Funding</legend>
+                    <label class="top">Anticipated Completion Date <input type="date" name="completeDate"></label>
+                    <label class="top">Course Subject
+                        <select name="subject">
+                            <option value="">Please Select &#9662;</option>
+                            <option value="software">Software Development</option>
+                            <option value="creative">Creative Professional</option>
+                            <option value="info">Information Technology</option>
+                            <option value="data">Data Professional</option>
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="business">Business Professional</option>
+                            <option value="security">Cyber Security</option>
+                        </select></label>
+                        <label class="top">How Many Authors <input type="number" name="authors"></label>
+                </fieldset>
+
+                <input type="submit" value="Propose My Course" class="submitBtn">
+
+            </form>
+
+        </main>
+
+        <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
+            <p class="update">Last Modified: <span id="lastmod"></span></p>
+        </footer>
+        <script src="lesson7.js"></script>
+        <script src="windchill.js"></script>
+        </body>
+</html>
+<!--Why does the menu in small/mobile view briefly open and not stay open-->
+<!--The Media Queries... why will the first one not show anymore?-->
