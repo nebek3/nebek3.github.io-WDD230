@@ -13,7 +13,7 @@
     </head>
     <body>
         <header>
-            <img class="logo" src="/lesson7/images/logo.png" alt="Weather Detrimental Determination">
+            <img class="logo" src="images/logo.png" alt="Weather Detrimental Determination">
             <div>
                 <h1>WDD</h1>
                 <h2>Weather's Detrimental Determination</h2>
@@ -45,37 +45,53 @@
 
                 <fieldset>
                     <legend>Storm Information</legend>
-                    <div>Audience</div>
                     <label class="sbs">Storm Date <input type="date" name="date"></label>
-                    <label class="sbs">Storm Type <input type="list" name="type"></label>
-                    <label class="sbs"><input type="radio" name="audience" value="advanced"> Advanced</label>
+                    <label class="top">Storm Type &#9662;<input list="type" name="type" placeholder="Select Type">
+                        <datalist id="type">
+                            <option>Flash Flood</option>
+                            <option>Hail</option>
+                            <option>Hurricane</option>
+                            <option>Thunderstorm</option>
+                            <option>Tornado</option>
+                        </datalist></label>
+                    <label class="sbs">Storm Severity <input type="range" id="rating" value="5" min="1" max="10" step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                        <span id="ratingvalue">5</span>
+                    </label>
 
-                    <div>Software Needed</div>
-                    <label class="sbs"><input type="checkbox" name="editing" value="yes"> Photo Editing</label>
-                    <label class="sbs"><input type="checkbox" name="code" value="yes"> Coding</label>
-                    <label class="sbs"><input type="checkbox" name="process" value="yes"> Preprocessor</label>
-                    <label class="sbs"><input type="checkbox" name="client" value="yes"> FTP Client</label>
+                    <datalist id="tickmarks">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                    </datalist>
+
+                    <label class="top">Storm Region &#9662;
+                        <select name="region">
+                            <option value="">Select Region</option>
+                            <option value="fishhaven">Fish Haven</option>
+                            <option value="preston">Preston</option>
+                            <option value="sodasprings">Soda Springs</option>
+                        </select></label>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Funding</legend>
-                    <label class="top">Anticipated Completion Date <input type="date" name="completeDate"></label>
-                    <label class="top">Course Subject
-                        <select name="subject">
-                            <option value="">Please Select &#9662;</option>
-                            <option value="software">Software Development</option>
-                            <option value="creative">Creative Professional</option>
-                            <option value="info">Information Technology</option>
-                            <option value="data">Data Professional</option>
-                            <option value="construction">Construction</option>
-                            <option value="manufacturing">Manufacturing</option>
-                            <option value="business">Business Professional</option>
-                            <option value="security">Cyber Security</option>
-                        </select></label>
-                        <label class="top">How Many Authors <input type="number" name="authors"></label>
+                    <legend>Urgency</legend>
+                    <div>User In-Danger Level</div>
+                    <label class="sbs"><input type="radio" name="danger" value="yes"> Yes</label>
+                    <label class="sbs"><input type="radio" name="danger" value="maybe"> Maybe</label>
+                    <label class="sbs"><input type="radio" name="danger" value="no"> No</label>
+
+                    <label class="top">Additional Information or Comments <input type="textarea" name="otherinfo"></label>
                 </fieldset>
 
-                <input type="submit" value="Propose My Course" class="submitBtn">
+                <input type="submit" value="Send My Report" class="submitBtn">
 
             </form>
 
@@ -84,7 +100,7 @@
         <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
             <p class="update">Last Modified: <span id="lastmod"></span></p>
         </footer>
-        <script src="lesson7.js"></script>
+        <script src="lesson8.js"></script>
         <script src="windchill.js"></script>
         </body>
 </html>
