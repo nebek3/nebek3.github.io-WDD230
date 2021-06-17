@@ -1,5 +1,4 @@
 html {
-    background-color: blue;
     display: block;
     /*max-width: 960px;*/
     margin: 0;
@@ -178,10 +177,7 @@ main h1 {
 
 
 
-@media only screen and (min-width: 500px) {
-    html {
-        background-color: red;
-    }
+@media only screen and (min-width: 750px) {
     .navigation {
         display: flex;
     }
@@ -201,10 +197,7 @@ main h1 {
 
 
 
-@media only screen and (min-width: 700px) {
-    html {
-        background-color: black;
-    }
+@media only screen and (min-width: 950px) {
     body {
         font-size: 16px;
     }
