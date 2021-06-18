@@ -158,6 +158,15 @@ main h1 {
 }
 #contact {
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#contact img {
+    border-radius: 10px;
+    margin: 0 10px 0 10px;
+}
+#contact img:hover {
+    box-shadow: 0 0 8px;
 }
 
 @media only screen and (min-width: 600px) {
