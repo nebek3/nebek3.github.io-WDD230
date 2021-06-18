@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+html {
+    font-family: Ubuntu, sans-serif;
+    display: block;
+}
+
+header {
+    text-align: center;
+    color: skyblue;
+    font-size: x-large;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+main section {
+    border: 2px solid sandybrown;
+    margin: 15px;
+    background-color: burlywood;
+}
+
+main img {
+    border-radius: 5px;
+    margin: 30px;
+}
+
+footer {
+    color: black;
+    padding: .3rem;
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (min-width: 750px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 950px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
