@@ -165,9 +165,13 @@ main h1 {
     border-radius: 10px;
     margin: 0 10px 0 10px;
 }
+#contact #map {
+    width: 100%;
+    display: none;
+}
 #contact img:hover {
     box-shadow: 0 0 8px;
-}
+} 
 
 @media only screen and (min-width: 600px) {
     body {
@@ -198,5 +202,8 @@ main h1 {
         margin: 10px auto;
         width: 100%;
         padding: 0;
+    }
+    #contact #map {
+        display: block;
     }
 }
