@@ -97,7 +97,6 @@ main h1 {
 .heroDiv {
     position: relative;
     padding: 0;
-    border-radius: 20px;
 }
 #main_image {
     margin: 0;
@@ -176,6 +175,14 @@ main h1 {
     display: grid;
     grid-template-columns: 1fr;
 }
+.homemain div:nth-child(odd) img{
+    float: left;
+    display: flex;
+}
+.homemain div:nth-child(even) img{
+    float: right;
+    display: flex;
+}
 
 
 
@@ -229,4 +236,10 @@ main h1 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .homemain img {
+        display: block;
+        border-radius: 5px;
+        float: none;
+    }
+    
 }
