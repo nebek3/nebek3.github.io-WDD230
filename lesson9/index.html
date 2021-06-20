@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en-us">
+
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -15,7 +16,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
         <title>WDD Preston</title>
     </head>
+
     <body>
+
         <header>
             <img class="logo" src="images/logo.png" alt="Weather Detrimental Determination">
             <div>
@@ -23,6 +26,7 @@
                 <h2>Weather's Detrimental Determination</h2>
             </div>
         </header>
+
         <nav>
             <ul class="navigation">
                 <li><a href="" onclick="toggleMenu()">&#9776; Menu</a></li>
@@ -35,17 +39,24 @@
                 <script src="lesson9.js"></script>
             </ul>
         </nav>
-        <secion class="heroDiv">
-            <picture>
+
+        <main>
+
+            <picture class="heroDiv">
                 <source srcset="images/lightningboatthin.jpg" media="(min-width: 1000px)">
                 <source srcset="images/lightningboatthin.jpg" media="(min-width: 600px)">
                 <source srcset="images/lightningboatthin.jpg" media="(min-width: 300px)">
                 <img src="images/lightningboatthin.jpg" id="main_image" alt="Sailing away from lightning">
             </picture>
-        </secion>
-        <main class="homemain">
+
+            <div class="homemain" style = "background-color: white;">
+                <div id="preston"></div>
+                <div id="sodasprings"></div>
+                <div id="fishhaven"></div>
+            </div>
 
         </main>
+
         <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
             <p class="update">Last Modified: <span id="lastmod"></span></p>
         </footer>

@@ -9,8 +9,9 @@ fetch(requestURL)
 
 /*Preston*/
 
-    let preston = document.createElement("div");
+    let preston = document.createElement("section");
     preston.classList.add("prestonhome");
+
     let pname = document.createElement("h2");
     let pmotto = document.createElement("h4");
     let pfounded = document.createElement("p");
@@ -38,45 +39,64 @@ fetch(requestURL)
 
 /*Soda Springs*/
 
-let i = 0;
-    let homemain = document.createElement("div");
-    let h2 = document.createElement("h2");
-    let slogan = document.createElement("h4");
-    let founded = document.createElement("p");
+    let sodasprings = document.createElement("section");
+    sodasprings.classList.add("prestonhome");
+
+    let sname = document.createElement("h2");
+    let smotto = document.createElement("h4");
+    let sfounded = document.createElement("p");
+    let spopulation = document.createElement("p");
+    let srainfall = document.createElement("p");
     let pic = document.createElement("img");
 
-    h2.textContent = towns[i].name;
-    slogan.textContent =towns[i].motto;
-    founded.textContent = "Founded in " + towns[i].yearFounded;
-    pic.setAttribute("src", towns[i].photo), "alt", towns[i].name;
+    sname.textContent = towns[0].name;
+    smotto.textContent =towns[0].motto;
+    sfounded.textContent = "Founded in " + towns[0].yearFounded;
+    spopulation.textContent = "Current Population is " + towns[0].currentPopulation;
+    srainfall.textContent = "The Average Rainfall is " + towns[0].averageRainfall;
+    pic.setAttribute("src", towns[0].photo), "alt", towns[0].name;
 
-    homemain.appendChild(h2);
-    homemain.appendChild(slogan);
-    homemain.appendChild(founded);
+    homemain.appendChild(sname);
+    homemain.appendChild(smotto);
+    homemain.appendChild(sfounded);
+    homemain.appendChild(spopulation);
+    homemain.appendChild(srainfall);
     homemain.appendChild(pic);
 
-    document.querySelector("main.homemain").appendChild(homemain);
+    document.querySelector("div.sodasprings").appendChild(sodasprings);
+
+    let preston = document.createElement('section');
+
 
 /*Fish Haven*/
 
-let i = 5;
-    let homemain = document.createElement("div");
-    let h2 = document.createElement("h2");
-    let slogan = document.createElement("h4");
-    let founded = document.createElement("p");
+    let sodasprings = document.createElement("section");
+    sodasprings.classList.add("prestonhome");
+
+    let sname = document.createElement("h2");
+    let smotto = document.createElement("h4");
+    let sfounded = document.createElement("p");
+    let spopulation = document.createElement("p");
+    let srainfall = document.createElement("p");
     let pic = document.createElement("img");
 
-    h2.textContent = towns[i].name;
-    slogan.textContent =towns[i].motto;
-    founded.textContent = "Founded in " + towns[i].yearFounded;
-    pic.setAttribute("src", towns[i].photo), "alt", towns[i].name;
+    sname.textContent = towns[5].name;
+    smotto.textContent =towns[5].motto;
+    sfounded.textContent = "Founded in " + towns[5].yearFounded;
+    spopulation.textContent = "Current Population is " + towns[5].currentPopulation;
+    srainfall.textContent = "The Average Rainfall is " + towns[5].averageRainfall;
+    pic.setAttribute("src", towns[5].photo), "alt", towns[5].name;
 
-    homemain.appendChild(h2);
-    homemain.appendChild(slogan);
-    homemain.appendChild(founded);
+    homemain.appendChild(sname);
+    homemain.appendChild(smotto);
+    homemain.appendChild(sfounded);
+    homemain.appendChild(spopulation);
+    homemain.appendChild(srainfall);
     homemain.appendChild(pic);
 
-    document.querySelector("main.homemain").appendChild(homemain);
+    document.querySelector("div.sodasprings").appendChild(sodasprings);
+
+    let preston = document.createElement('section');
 });
 
 
