@@ -13,7 +13,7 @@ function chill(t, s) {
 }
 
 if (s > 3 && t <= 50) {
-    document.getElementById("windchill").innerHTML = chill(t, s)
+    document.getElementById("windchill").innerHTML = chill(t, s);
 }
 else {
     document.getElementById('windchill').innerHTML = "N/A";

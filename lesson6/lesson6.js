@@ -6,5 +6,5 @@ document.querySelector('#lastmod').textContent = document.lastModified;
 
 let theDate = new Date();
 if (theDate.getDay() == 5) {
-    document.querySelector("banner").style.display = "block";
+    document.querySelector("#banner").style.display = "block";
 }
