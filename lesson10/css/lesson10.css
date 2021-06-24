@@ -75,7 +75,7 @@ main div {
     padding: 2rem;
     margin: 1rem;
 }
-banner {
+#banner {
     display: none;
     background-color: yellow;
     text-align: center;

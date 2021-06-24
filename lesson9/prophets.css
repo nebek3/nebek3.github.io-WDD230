@@ -36,11 +36,9 @@ footer {
 
 
 
-
-
-@media only screen and (min-width: 750px) {
+/* medium viewports */
+@media (min-width: 32.5em) {
     .cards {
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -48,10 +46,9 @@ footer {
 
 
 
-
-@media only screen and (min-width: 950px) {
+/* large viewports */
+@media (min-width: 60em) {
     .cards {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
