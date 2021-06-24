@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta name="description"
+            content="Preston Town Page"/>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/lesson10.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
+        <title>WDD Preston</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../images/logo.png" alt="Weather Detrimental Determination">
+            <div>
+                <h1>WDD</h1>
+                <h2>Weather's Detrimental Determination</h2>
+            </div>
+        </header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li class="active"><a href="#">Storm Center</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+            <script src="../js/lesson10.js"></script>
+        </nav>
+        <main>
+
+            <h1>Storm Center</h1>
+
+            <form method="GET" action="report.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">Full Name* <input type="text" name="name" pattern="[A-Za-z]{5,}" required></label>
+                    <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
+                    <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                    <label class="top">ZIP Code* <input type="number" name="ZIP" required></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Storm Information</legend>
+                    <label class="sbs">Storm Date <input type="date" name="date"></label>
+                    <label class="top">Storm Type &#9662;<input list="type" name="type" placeholder="Select Type">
+                        <datalist id="type">
+                            <option>Flash Flood</option>
+                            <option>Hail</option>
+                            <option>Hurricane</option>
+                            <option>Thunderstorm</option>
+                            <option>Tornado</option>
+                        </datalist></label>
+                    <label class="sbs">Storm Severity <input type="range" id="rating" value="5" min="1" max="10" step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                        <span id="ratingvalue">5</span>
+                    </label>
+
+                    <datalist id="tickmarks">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                    </datalist>
+
+                    <label class="top">Storm Region &#9662;
+                        <select name="region">
+                            <option value="">Select Region</option>
+                            <option value="fishhaven">Fish Haven</option>
+                            <option value="preston">Preston</option>
+                            <option value="sodasprings">Soda Springs</option>
+                        </select></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Urgency</legend>
+                    <div>User In-Danger Level</div>
+                    <label class="sbs"><input type="radio" name="danger" value="yes"> Yes</label>
+                    <label class="sbs"><input type="radio" name="danger" value="maybe"> Maybe</label>
+                    <label class="sbs"><input type="radio" name="danger" value="no"> No</label>
+
+                    <label class="top">Additional Information or Comments <input type="text" name="otherinfo"></label>
+                </fieldset>
+
+                <input type="submit" value="Send My Report" class="submitBtn">
+
+            </form>
+
+        </main>
+
+        <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
+            <p class="update">Last Modified: <span id="lastmod"></span></p>
+        </footer>
+        <script src="../js/lesson10.js"></script>
+        <script src="../js/windchill.js"></script>
+        </body>
+</html>
+<!--Why does the menu in small/mobile view briefly open and not stay open-->
+<!--The Media Queries... why will the first one not show anymore?-->
