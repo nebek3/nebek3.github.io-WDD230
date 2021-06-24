@@ -34,10 +34,10 @@
 
             <h1>Storm Center</h1>
 
-            <form method="GET" action="thanks.html">
+            <form method="GET" action="report.html">
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label class="top">Full Name* <input type="text" name="name" pattern="[A-Za-z]{5}" required></label>
+                    <label class="top">Full Name* <input type="text" name="name" pattern="[A-Za-z]{5,}" required></label>
                     <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
                     <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
                     <label class="top">ZIP Code* <input type="number" name="ZIP" required></label>
@@ -88,7 +88,7 @@
                     <label class="sbs"><input type="radio" name="danger" value="maybe"> Maybe</label>
                     <label class="sbs"><input type="radio" name="danger" value="no"> No</label>
 
-                    <label class="top">Additional Information or Comments <input type="textarea" name="otherinfo"></label>
+                    <label class="top">Additional Information or Comments <input type="text" name="otherinfo"></label>
                 </fieldset>
 
                 <input type="submit" value="Send My Report" class="submitBtn">
