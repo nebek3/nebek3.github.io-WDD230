@@ -13,7 +13,7 @@ main p, ul {
 }
 header {
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
+    background-color: slategray;
     display: flex;
     color: skyblue;
 }
@@ -39,10 +39,11 @@ nav ul li {
     flex: 1 1 100%;
 }
 nav ul li a {
-	padding: 0.5rem;
-	text-decoration: none;
-	font-size: 0.95rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 0.95rem;
     display: block;
+    color: slategray;
     }
 nav a:hover {
     color: lightgreen;
@@ -148,7 +149,7 @@ main h1 {
 .article p {
     width: 55%;
 }
-.article img {
+.article picture {
     position: absolute;
     right: 15px;
     width: 40%;
