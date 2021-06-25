@@ -139,8 +139,10 @@ main h1 {
     border-radius: 20px;
 }
 .fiveday {
+    display: none;    
+}
+.fiveday span {
     display: none;
-    
 }
 .article {
     position: relative;

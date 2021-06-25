@@ -11,4 +11,4 @@ fetch(apiURL)
             document.getElementById("imagesrc").textContent = imagesrc;
             document.getElementById("icon").setAttribute("src", imagesrc);
             document.getElementById("icon").setAttribute("alt", desc);
-    })
+    });
