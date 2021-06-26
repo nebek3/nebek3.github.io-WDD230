@@ -176,13 +176,15 @@ main h1 {
     grid-template-columns: 1fr;
     margin: 0 0 0 0;
 }
+.homemain h2, h4 {
+    margin-top: 0;
+}
 .homemain div:nth-child(odd) img{
-    float: left;
-    display: flex;
+    grid-column: 2;
 }
 .homemain div:nth-child(even) img{
-    float: right;
-    display: flex;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 
