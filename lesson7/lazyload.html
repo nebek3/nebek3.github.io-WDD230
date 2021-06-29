@@ -9,16 +9,16 @@
         <link rel="stylesheet" href="lazy.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
-        <script src="lazy.js" defer></script>
         <title>Lazy Loading</title>
     </head>
     <body>
         <h1>Lazy Loading</h1>
-        <div><img src="images/sun.png" data-src="images/twistersmall"></div>
-        <div><img src="images/sun.png" data-src="images/sunnyclouds400.216"></div>
-        <div><img src="images/sun.png" data-src="images/mountains400.289"></div>
-        <div><img src="images/sun.png" data-src="images/snowtrees400.250"></div>
-        <div><img src="images/sun.png" data-src="images/lightningboatsmall"></div>
-        <div><img src="images/sun.png" data-src="images/largecloud400.267"></div>
+        <picture><img src="images/sun.png" data-src="images/twistersmall.jpg" alt="twister"></picture>
+        <picture><img src="images/sun.png" data-src="images/sunnyclouds400.216.jpg" alt="sunny clouds"></picture>
+        <picture><img src="images/sun.png" data-src="images/mountains400.289.jpg" alt="mountains"></picture>
+        <picture><img src="images/sun.png" data-src="images/snowtrees400.250.jpg" alt="snow-covered trees"></picture>
+        <picture><img src="images/sun.png" data-src="images/lightningboatsmall.jpg" alt="sailboat sailing into a storm"></picture>
+        <picture><img src="images/sun.png" data-src="images/largecloud400.267.jpg" alt="large, dark cloud"></picture>
     </body>
+    <script src="lazy.js"></script>
 </html>

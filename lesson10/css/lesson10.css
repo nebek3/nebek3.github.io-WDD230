@@ -328,7 +328,7 @@ form label.top input:required:valid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    #gallery img:hover {
+    #gallery img:hover, p:hover {
         box-shadow: 0 0 15px;
     }
     /*----------STORM CENTER----------*/
