@@ -188,6 +188,21 @@ main h1 {
     width: 100%;
     border-radius: 20px;
 }
+.homemain {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 0 0 0;
+}
+.homemain h2, h4 {
+    margin-top: 0;
+}
+.homemain div:nth-child(odd) img{
+    grid-column: 2;
+}
+.homemain div:nth-child(even) img{
+    grid-column: 1;
+    grid-row: 1;
+}
 /*----------STORM CENTER----------*/
 /*----------FORM----------*/
 form fieldset {
@@ -300,6 +315,15 @@ form label.top input:required:valid {
     #gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+    .homemain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .homemain img {
+        display: block;
+        border-radius: 5px;
+        float: none;
     }
 }
 
