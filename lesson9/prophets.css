@@ -27,7 +27,7 @@ main img {
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
-    max-width: 150px;
+    max-width: 300px;
     box-shadow: 0 0 18px;
 }
 
@@ -43,6 +43,10 @@ footer {
 @media (min-width: 32.5em) {
     .cards {
         grid-template-columns: 1fr 1fr;
+    }
+
+    main img {
+        max-width: 200px;
     }
 }
 
