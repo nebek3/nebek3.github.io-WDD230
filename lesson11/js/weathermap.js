@@ -11,28 +11,37 @@ fetch(apiURL)
 
 const apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
 
+const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
 fetch(apiForecast)
     .then ((response) => response.json())
     .then ((jsObject) => {
         console.log(jsObject.list);
         let day = 0;
-        let imagesrc = "hold text";
-        let desc = "hold text";
-        const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        const fiveDay = jsObject.list.filter(forecast => forecast.dt_text.includes("18:00:00"));
-        console.log(fiveDay);
+        let imagesrc = document.getElementById(`dayimgsrc`);
 
-        fiveDay.forEach(x => {
-            let d = new Date(x.dt_text);
-            document.getElementById(`day${day+1}`).textContent = dayofWeek[d.getDay()];
-            imagesrc = "https://openweathermap.org/img/w/" + jsObject.list[day].weather[0].icon + ".png";
-            desc = jsObject.list[day+1].weather[0].description;
-                document.getElementById(`day${day+1}imgsrc`).textContent = imagesrc;
-                document.getElementById(`day${day+1}img`).setAttribute("src", imagesrc);
-                document.getElementById(`day${day+1}img`).setAttribute("alt", desc);
-            document.getElementById(`day${day+1}temp`).textContent = x.main.temp;
-            day++;
-        });
+        let daytemp = document.getElementById(`daytemp`);
+
+        let desc = jsObject.list[day].weather[0].description;
+
+        let daySum = document.getElementById("day");
+
+        let list = jsObject.list;
+
+        for(li of list) {
+            if(li.dt_text.includes("18:00:00")) {
+                let d = new Date(li.dt*1000);
+
+                daySum[d].innerHTML = dayofWeek[d.getDay()];
+
+                daytemp[d].innerHTML = li.main.temp;
+
+                let image = "https://openweathermap.org/img/w/" + jsObject.list[day].weather[0].icon + ".png";
+                    imagesrc[d].setAttribute("src", image);
+                    imagesrc[d].setAttribute("alt", desc);
+                day++;
+            }
+        }
     });
 
     //     document.getElementById("day1").textContent = jsObject.list[1].dt_txt;

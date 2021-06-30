@@ -15,7 +15,7 @@ fetch(apiForecast)
     .then ((response) => response.json())
     .then ((jsObject) => {
         console.log(jsObject.list);
-        let day = 0;
+        let day = 1;
         let imagesrc = "hold text";
         let desc = "hold text";
         const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -24,13 +24,13 @@ fetch(apiForecast)
 
         fiveDay.forEach(x => {
             let d = new Date(x.dt_text);
-            document.getElementById(`day${day+1}`).textContent = dayofWeek[d.getDay()];
+            document.getElementById(`day${day}`).textContent = dayofWeek[d.getDay()];
             imagesrc = "https://openweathermap.org/img/w/" + jsObject.list[day].weather[0].icon + ".png";
-            desc = jsObject.list[day+1].weather[0].description;
-                document.getElementById(`day${day+1}imgsrc`).textContent = imagesrc;
-                document.getElementById(`day${day+1}img`).setAttribute("src", imagesrc);
-                document.getElementById(`day${day+1}img`).setAttribute("alt", desc);
-            document.getElementById(`day${day+1}temp`).textContent = x.main.temp;
+            desc = jsObject.list[day].weather[0].description;
+                document.getElementById(`day${day}imgsrc`).textContent = imagesrc;
+                document.getElementById(`day${day}img`).setAttribute("src", imagesrc);
+                document.getElementById(`day${day}img`).setAttribute("alt", desc);
+            document.getElementById(`day${day}temp`).textContent = x.main.temp;
             day++;
         });
     });
