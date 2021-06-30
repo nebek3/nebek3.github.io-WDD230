@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta name="description"
+            content="Preston Town Page"/>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/final.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
+        <title>WDD Preston</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../images/logo.png" alt="Weather Detrimental Determination">
+            <div>
+                <h1>WDD</h1>
+                <h2>Weather's Detrimental Determination</h2>
+            </div>
+        </header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="preston10.html">Preston</a></li>
+                <li><a href="../sodasprings.html">Soda Springs</a></li>
+                <li><a href="../fishhaven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <script src="../js/final.js"></script>
+        </nav>
+        <main>
+            <div id="banner">Pancakes at the park! Come and enjoy! </div>
+
+            <h1>Preston</h1>
+            <div class="heroDiv">
+                <picture>
+                    <source srcset="../images/lightningboatthin.jpg" media="(min-width: 1000px)">
+                    <source srcset="../images/lightningboatmedium.jpg" media="(min-width: 600px)">
+                    <source srcset="../images/lightningboatsmall.jpg" media="(min-width: 300px)">
+                    <img src="../images/lightningboatsmall.jpg" class="main_image" alt="Sailboat on glassy water with a storm">
+                </picture>
+                <section class="weatherSummary">
+                    <h3>Weather Summmary</h3>
+                        <p class="left" style="margin-top: 0;">Currently:</p>
+                        <p class="left">Temperature:</p>
+                        <p class="left">Wind Chill:</p>
+                        <p class="left">Humidity:</p>
+                        <p class="left">Wind Speed:</p>
+                        <p class="right"> <span id="current">fill</span></p>
+                        <p class="right"> <span id="temp">fill</span>&deg; F</p>
+                        <p class="right"> <span id="windchill"></span>&deg; F</p>
+                        <p class="right"> <span id="humidity">fill</span></p>
+                        <p class="right"> <span id="wind">fill</span> mph</p>
+                </section>
+            </div>
+            
+            <div class="fiveday">
+                <h2>5 Day Forecast</h2>
+                <section class="forecast">
+                    <div>
+                        <h5 id="day1">Monday</h5>
+                        <span id="day1imgsrc"></span><img id="day1img" src="../images/sun.png" alt="sun">
+                        <p><span id="day1temp">65</span>&deg; F</p>
+                    </div>
+                    <div>
+                        <h5 id="day2">Tuesday</h5>
+                        <span id="day2imgsrc"></span><img id="day2img" src="../images/sun.png" alt="sun">
+                        <p><span id="day2temp">60</span>&deg; F</p>
+                    </div>
+                    <div>
+                        <h5 id="day3">Wednesday</h5>
+                        <span id="day3imgsrc"></span><img id="day3img" src="../images/rain.png" alt="rain">
+                        <p><span id="day3temp">46</span>&deg; F</p>
+                    </div>
+                    <div>
+                        <h5 id="day4">Thursday</h5>
+                        <span id="day4imgsrc"></span><img id="day4img" src="../images/rain.png" alt="rain">
+                        <p><span id="day4temp">48</span>&deg; F</p>
+                    </div>
+                    <div>
+                        <h5 id="day5">Friday</h5>
+                        <span id="day5imgsrc"></span><img id="day5img" src="../images/sun.png" alt="sun">
+                        <p><span id="day5temp">64</span>&deg; F</p>
+                    </div>
+                </section>
+            </div>
+            <section class="article">
+                <picture>
+                    <source srcset="../images/twisterlarge.jpg" media="(min-width: 1000px)">
+                    <source srcset="../images/twistermedium.jpg" media="(min-width: 600px)">
+                    <source srcset="../images/twistersmall.jpg" media="(min-width: 300px)">
+                    <img src="../images/twistersmall.jpg" class="main_image" alt="Twister on the water">
+                </picture>
+                <div class="article">
+                    <h3>Windy Weather</h3>
+                    <h5>By Wally Walden</h5>
+                    <p>What do you do when the weather is windy? Well, you have plenty of options! There is, 
+                        of course, the classic activity of flying kites. It doesn't matter if it is something 
+                        fancy or something plain, flying a kite can relax the mind and help one to find enjoyment 
+                        in the wind. Another fantastic option is to go sailing! Though, this is only recommended 
+                        on warmer days. Avid or determined sailors will take any opportunity they get, however!</p>
+                </div>
+            </section>
+            <div id="contact">
+                <img id="map" src="../images/prestonmap.gif" alt="Map of Preston">
+                <div>
+                    <h2>Contact Information</h2>
+                    <p>Weather's Detrimental Determination</p>
+                    <p>5555 S 5th St</p>
+                    <p>(555)555-5555</p>
+                    <p>wdd@*****.com</p>
+                    <img src="../images/facebook.jpg" width="40" alt="facebook logo">
+                    <img src="../images/youtube.jpg" width="40" alt="youtube logo">
+                    <img src="../images/twitter.jpg" width="40" alt="twitter logo">
+                </div>
+            </div>
+        </main>
+        <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a> | 
+            <a href="https://openweathermap.org/">OpenWeatherMap</a>
+            <p class="update">Last Modified: <span id="lastmod"></span></p>
+        </footer>
+        <script src="../js/final.js"></script>
+        <script src="../js/windchill.js"></script>
+        <script src="../js/weathermap.js"></script>
+        </body>
+</html>
+<!--Gallery and Home pages: menu will not stay open-->
+<!--5-Day Forecast javascript isn't working-->

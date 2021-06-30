@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta name="description"
+            content="Preston Town Page"/>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/final.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Special+Elite&display=swap" rel="stylesheet">
+        <title>WDD Preston</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../images/logo.png" alt="Weather Detrimental Determination">
+            <div>
+                <h1>WDD</h1>
+                <h2>Weather's Detrimental Determination</h2>
+            </div>
+        </header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="preston10.html">Preston</a></li>
+                <li><a href="../sodasprings.html">Soda Springs</a></li>
+                <li><a href="../fishhaven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li class="active"><a href="gallery-7.html">Gallery</a></li>
+                <script src="../js/final.js"></script>
+            </ul>
+        </nav>
+        <main>
+            <section id="gallery">
+                <h2></h2>
+                <h2 style="text-align: center; color: skyblue;">Gallery</h2>
+                <h2></h2>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/lightningboatmedium.jpg" alt="Sailboat and Lighnting">
+                    <p>It is dangerous to sail in a lightning storm</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/twistermedium.jpg" alt="Twister">
+                    <p>Wind can be dangerous. Have you seen the movie Twister?</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/dirtroad400.268.jpg" alt="Dirt Road">
+                    <p>Pleasant weather can lead to a comforting drive</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/snowtrees400.250.jpg" alt="Snow-covered Tree">
+                    <p>Snow changes how the world looks</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/sunnyclouds400.216.jpg" alt="Sun shining through the clouds">
+                    <p>Clouds can't hide the sun forever</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/calmlake400.300.jpg" alt="A calm lake">
+                    <p>With no wind, sailing on this lake would be difficult</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/largecloud400.267.jpg" alt="A large cloud">
+                    <p>That's quite the storm coming in!</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/mountains400.289.jpg" alt="Mountans">
+                    <p>Weather helps determine landscapes</p>
+                </div>
+                <div>
+                    <img src="../images/logo.png" data-src="../images/cloudyrainbow.jpg" alt="Rainbow in the clouds">
+                    <p>Enjoy the rainbow</p>
+                </div>
+            </section>
+        </main>
+        <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a> | 
+            <a href="https://openweathermap.org/">OpenWeatherMap</a>
+            <p class="update">Last Modified: <span id="lastmod"></span></p>
+        </footer>
+        <script src="../js/final.js"></script>
+        <script src="../js/lazy.js"></script>
+        <script src="../js/windchill.js"></script>
+        </body>
+</html>
