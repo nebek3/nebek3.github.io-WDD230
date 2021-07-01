@@ -52,7 +52,7 @@ nav a:hover {
 }
 nav li.active a {
     color: black;
-    background: radial-gradient(skyblue, lightgreen);
+    background: radial-gradient(skyblue, slategray);
     padding: 0.5rem;
 }
 nav ul.hide {

@@ -1,12 +1,24 @@
-const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+const town = document.getElementById("townID");
+
+let apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+
+if(town.textContent == "Soda Springs") {
+    apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5607916&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+}
+else if(town.textContent == "Fish Haven") {
+    apiURL = "https://api.openweathermap.org/data/2.5/weather?lat=42.0371544&lon=-111.39595&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+};
 
 fetch(apiURL)
     .then ((response) => response.json())
     .then ((jsObject) => {
+        let temperature = Math.round(jsObject.main.temp);
+        let wind = Math.round(jsObject.wind.speed);
+
         document.getElementById("current").textContent = jsObject.weather[0].main;
-        document.getElementById("temp").textContent = jsObject.main.temp;
+        document.getElementById("temp").textContent = temperature;
         document.getElementById("humidity").textContent = jsObject.main.humidity;
-        document.getElementById("wind").textContent = jsObject.wind.speed;
+        document.getElementById("wind").textContent = wind;
     });
 
 const apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
