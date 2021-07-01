@@ -42,7 +42,6 @@ fetch(requestURL)
 
             let rain = Math.round(myTowns.averageRainfall);
 
-
             founded.textContent = `Founded in ${myTowns.yearFounded}`;
             population.textContent = `Current Population is ${myTowns.currentPopulation}`;
             rainfall.textContent = `The Average Rainfall is ${rain}`;

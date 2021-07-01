@@ -21,14 +21,21 @@ fetch(apiURL)
         document.getElementById("wind").textContent = wind;
     });
 
-const apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+let apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+
+if(town.textContent == "Soda Springs") {
+    apiURL = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+}
+else if(town.textContent == "Fish Haven") {
+    apiURL = "https://api.openweathermap.org/data/2.5/forecast?lat=42.0371544&lon=-111.39595&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+};
 
 const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 fetch(apiForecast)
     .then ((response) => response.json())
     .then ((jsObject) => {
-        console.log(jsObject.list);
+        console.log(jsObject);
         let day = 0;
         let imagesrc = document.getElementById(`dayimgsrc`);
 
@@ -55,6 +62,39 @@ fetch(apiForecast)
             }
         }
     });
+
+/*--------------- ANNOUNCE NEXT EVENT? ---------------*/
+
+/*requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+
+fetch(requestURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        const towns = jsonObject["towns"];
+
+        const myTowns = towns.filter(x => x.name == "Preston" || x.name == "Soda Springs" || x.name == "Fish Haven");
+        console.log(myTowns);
+    
+        let event = document.createElement("div");
+        let name = document.createElement("h2");
+        let e = document.createElement("h3");
+        let p = document.createElement("p");
+
+        name.textContent = town +"'s next event:";
+        e.textContent = myTowns.events[1];
+        p.textContent = `You won't want to miss ${e} this year! It's going to be an event like never before!`
+
+        event.append(name);
+        event.append(e);
+        event.append(p);
+
+        document.querySelector("div.article").appendChild(event);
+    });*/
+
+
+
 
     //     document.getElementById("day1").textContent = jsObject.list[1].dt_txt;
     //     let imagesrc = "https://openweathermap.org/img/w/" + jsObject.list[1].weather[0].icon + ".png";
