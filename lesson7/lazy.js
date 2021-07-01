@@ -8,12 +8,12 @@ const loadImages = (image) => {
 };
 
 const imgOptions = {
-    rootMargin: "0px 0px 100px 0px",
-    threshold: 1
+    threshold: .6,
+    rootMargin: "0px 0px 50px 0px"
 };
 
-if("IntersectionObersver" in window) {
-    const observer = new IntersectionObserver((items, observer) => {
+if("intersectionObserver" in window) {
+    const observer = new intersectionObserver((items, observer) => {
         items.forEach(item => {
             if (item.isIntersecting) {
                 loadImages(item.target);

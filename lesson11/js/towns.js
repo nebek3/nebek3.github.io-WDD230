@@ -39,9 +39,13 @@ fetch(requestURL)
 
             name.textContent = myTowns.name;
             motto.textContent = myTowns.motto;
+
+            let rain = Math.round(myTowns.averageRainfall);
+
+
             founded.textContent = `Founded in ${myTowns.yearFounded}`;
             population.textContent = `Current Population is ${myTowns.currentPopulation}`;
-            rainfall.textContent = `The Average Rainfall is ${myTowns.averageRainfall}`;
+            rainfall.textContent = `The Average Rainfall is ${rain}`;
             pic.setAttribute("src", `../images/${myTowns.photo}`);
             pic.setAttribute("alt", `${myTowns.name}`)
 
