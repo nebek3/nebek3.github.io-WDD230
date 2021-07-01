@@ -50,9 +50,9 @@ nav a:hover {
     background-color: slategray;
     padding: 0.5rem;
 }
-nav li.active a{
-    color: skyblue;
-    background: radial-gradient(slategray, lightgreen);
+nav li.active a {
+    color: black;
+    background: radial-gradient(skyblue, lightgreen);
     padding: 0.5rem;
 }
 nav ul.hide {
