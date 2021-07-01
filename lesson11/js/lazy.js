@@ -13,7 +13,7 @@ const imgOptions = {
 };
 
 if("IntersectionObersver" in window) {
-    const observer = new IntersectionObserver(items => {
+    const observer = new intersectionObserver( (items, observer) => {
         items.forEach(item => {
             if (item.isIntersecting) {
                 loadImages(item.target);

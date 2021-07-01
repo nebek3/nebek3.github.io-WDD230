@@ -180,12 +180,12 @@ main h1 {
     margin-top: 0;
 }
 .homemain div:nth-child(odd) img{
-    grid-column: 2;
+    display: flex;
+    float: right;
 }
 .homemain div:nth-child(even) img{
-    grid-column: 1;
-    grid-row: 1;
-}
+    display: flex;
+    float: left;
 
 
 
@@ -205,15 +205,7 @@ main h1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .homemain {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .homemain img {
-        display: block;
-        border-radius: 5px;
-        float: none;
-    }
+
 }
 
 
@@ -243,5 +235,15 @@ main h1 {
     }
     #gallery img:hover {
         box-shadow: 0 0 15px;
+    }
+    .homemain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .homemain img {
+        display: block;
+        border-radius: 5px;
+        float: none;
+        max-width: 250px;
     }
 }
