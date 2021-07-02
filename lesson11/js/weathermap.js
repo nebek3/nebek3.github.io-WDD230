@@ -21,43 +21,47 @@ fetch(apiURL)
         document.getElementById("wind").textContent = wind;
     });
 
-let apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+
+
+let apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=bd3242f54c0077905efdbc2d08b08bc2&units=imperial";
 
 if(town.textContent == "Soda Springs") {
-    apiURL = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+    apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&appid=bd3242f54c0077905efdbc2d08b08bc2&units=imperial";
 }
 else if(town.textContent == "Fish Haven") {
-    apiURL = "https://api.openweathermap.org/data/2.5/forecast?lat=42.0371544&lon=-111.39595&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
+    apiForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=42.0371544&lon=-111.39595&appid=bd3242f54c0077905efdbc2d08b08bc2&units=imperial";
 };
 
 const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
+console.log(apiForecast);
 fetch(apiForecast)
-    .then ((response) => response.json())
-    .then ((jsObject) => {
-        console.log(jsObject);
+    .then(response => response.json())
+    .then(response => {
+        console.log(response);
         let day = 0;
-        let imagesrc = document.getElementById(`dayimgsrc`);
+        let imagesrc = document.querySelectorAll('.eachDay .dayimgsrc');
 
-        let daytemp = document.getElementById(`daytemp`);
+        let daytemp = document.querySelectorAll('.eachDay .daytemp');
+        console.log(daytemp);
 
-        let desc = jsObject.list[day].weather[0].description;
+        let desc = response.list[day].weather[0].description;
 
-        let daySum = document.getElementById("day");
+        let daySum = document.querySelectorAll('.eachDay .day');
 
-        let list = jsObject.list;
+        let list = response.list;
 
-        for(li of list) {
-            if(li.dt_text.includes("18:00:00")) {
-                let d = new Date(li.dt*1000);
+        for (item of list) {
+            if (item.dt_txt.includes('18:00:00')) {
+                let d = new Date(item.dt * 1000);
 
-                daySum[d].innerHTML = dayofWeek[d.getDay()];
+                daySum[day].innerHTML = dayofWeek[d.getDay()];
 
-                daytemp[d].innerHTML = li.main.temp;
+                daytemp[day].innerHTML = Math.round(item.main.temp) + "&deg; F";
 
-                let image = "https://openweathermap.org/img/w/" + jsObject.list[day].weather[0].icon + ".png";
-                    imagesrc[d].setAttribute("src", image);
-                    imagesrc[d].setAttribute("alt", desc);
+                let image = "https://openweathermap.org/img/w/" + item.weather[0].icon + ".png";
+                    imagesrc[day].setAttribute("src", image);
+                    imagesrc[day].setAttribute("alt", desc);
                 day++;
             }
         }

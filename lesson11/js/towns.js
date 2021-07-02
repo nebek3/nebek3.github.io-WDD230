@@ -30,7 +30,7 @@ fetch(requestURL)
             let town = document.createElement("div");
 
             let name = document.createElement("h2");
-            let motto = document.createElement("h4");
+            let motto = document.createElement("h6");
             let founded = document.createElement("p");
             let population = document.createElement("p");
             let rainfall = document.createElement("p");
