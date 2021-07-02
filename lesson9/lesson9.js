@@ -28,6 +28,9 @@ fetch(requestURL)
 
         myTowns.forEach(myTowns => {
             let town = document.createElement("div");
+            town.className = "townDivs"
+
+            let group = document.createElement("div");
 
             let name = document.createElement("h2");
             let motto = document.createElement("h4");
@@ -46,11 +49,12 @@ fetch(requestURL)
             pic.setAttribute("alt", `${myTowns.name}`)
 
 
-            town.append(name);
-            town.append(motto);
-            town.append(founded);
-            town.append(population);
-            town.append(rainfall);
+            group.append(name);
+            group.append(motto);
+            group.append(founded);
+            group.append(population);
+            group.append(rainfall);
+            town.append(group);
             town.append(pic);
 
             document.querySelector("div.homemain").appendChild(town);

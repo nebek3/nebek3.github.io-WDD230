@@ -180,12 +180,12 @@ main h1 {
     margin-top: 0;
 }
 .homemain div:nth-child(odd) img{
-    display: flex;
-    float: right;
+    grid-column: 2;
 }
 .homemain div:nth-child(even) img{
-    display: flex;
-    float: left;
+    grid-column: 1;
+    grid-row: 1;
+}
 
 
 
@@ -205,7 +205,10 @@ main h1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
+    .townDivs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
@@ -245,5 +248,8 @@ main h1 {
         border-radius: 5px;
         float: none;
         max-width: 250px;
+    }
+    .townDivs {
+        display: inline;
     }
 }
