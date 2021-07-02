@@ -200,20 +200,15 @@ main h1 {
     border: solid slategray;
 }
 .homemain {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 0 0 0;
+    display: block;
 }
 .homemain h2, h4 {
     margin-top: 0;
 }
-.homemain div:nth-child(odd) img{
-    display: flex;
-    float: right;
-}
-.homemain div:nth-child(even) img{
-    display: flex;
-    float: left;
+.homemain img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
 /*----------STORM CENTER----------*/
 /*----------FORM----------*/
@@ -236,7 +231,6 @@ form label.top, form div {
     color: #9c2c13;
     font-size: .8rem;
 }
-
 
 form div {
     padding: 1rem 0 0 0;
@@ -331,6 +325,15 @@ form label.top input:required:valid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .townDivs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .homemain img {
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 350px;
+    }
 }
 
 
@@ -370,6 +373,9 @@ form label.top input:required:valid {
         border-radius: 5px;
         float: none;
         max-width: 250px;
+    }
+    .townDivs {
+        display: inline;
     }
     /*----------STORM CENTER----------*/
     form label.sbs {
