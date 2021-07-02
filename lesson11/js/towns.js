@@ -23,8 +23,6 @@ fetch(requestURL)
         const towns = jsonObject["towns"];
 
         const myTowns = towns.filter(x => x.name == "Preston" || x.name == "Soda Springs" || x.name == "Fish Haven");
-        console.log(myTowns);
-
 
         myTowns.forEach(myTowns => {
             let town = document.createElement("div");
