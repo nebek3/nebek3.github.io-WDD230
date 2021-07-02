@@ -11,28 +11,38 @@ fetch(apiURL)
 
 const apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=bd3242f54c0077905efdbc2d08b08bc2";
 
-fetch(apiForecast)
-    .then ((response) => response.json())
-    .then ((jsObject) => {
-        console.log(jsObject.list);
-        let day = 1;
-        let imagesrc = "hold text";
-        let desc = "hold text";
-        const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        const fiveDay = jsObject.list.filter(forecast => forecast.dt_text.includes("18:00:00"));
-        console.log(fiveDay);
+const dayofWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-        fiveDay.forEach(x => {
-            let d = new Date(x.dt_text);
-            document.getElementById(`day${day}`).textContent = dayofWeek[d.getDay()];
-            imagesrc = "https://openweathermap.org/img/w/" + jsObject.list[day].weather[0].icon + ".png";
-            desc = jsObject.list[day].weather[0].description;
-                document.getElementById(`day${day}imgsrc`).textContent = imagesrc;
-                document.getElementById(`day${day}img`).setAttribute("src", imagesrc);
-                document.getElementById(`day${day}img`).setAttribute("alt", desc);
-            document.getElementById(`day${day}temp`).textContent = x.main.temp;
-            day++;
-        });
+fetch(apiForecast)
+    .then(response => response.json())
+    .then(response => {
+        console.log(response);
+        let day = 0;
+        let imagesrc = document.querySelectorAll('.eachDay .dayimgsrc');
+
+        let daytemp = document.querySelectorAll('.eachDay .daytemp');
+        console.log(daytemp);
+
+        let desc = response.list[day].weather[0].description;
+
+        let daySum = document.querySelectorAll('.eachDay .day');
+
+        let list = response.list;
+
+        for (item of list) {
+            if (item.dt_txt.includes('18:00:00')) {
+                let d = new Date(item.dt * 1000);
+
+                daySum[day].innerHTML = dayofWeek[d.getDay()];
+
+                daytemp[day].innerHTML = Math.round(item.main.temp) + "&deg; F";
+
+                let image = "https://openweathermap.org/img/w/" + item.weather[0].icon + ".png";
+                    imagesrc[day].setAttribute("src", image);
+                    imagesrc[day].setAttribute("alt", desc);
+                day++;
+            }
+        }
     });
 
     //     document.getElementById("day1").textContent = jsObject.list[1].dt_txt;
