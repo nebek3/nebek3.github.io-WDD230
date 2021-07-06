@@ -209,6 +209,7 @@ main h1 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    width: 100%;
 }
 /*----------STORM CENTER----------*/
 /*----------FORM----------*/
@@ -333,6 +334,14 @@ form label.top input:required:valid {
         margin-top: auto;
         margin-bottom: auto;
         max-width: 350px;
+    }
+    .homemain .townDivs img:nth-child(odd) {
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+    .homemain .townDivs img:nth-child(even) {
+        grid-column: 1/2;
+        grid-row: 1;
     }
 }
 
