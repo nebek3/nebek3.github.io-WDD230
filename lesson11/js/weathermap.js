@@ -64,7 +64,7 @@ fetch(apiForecast)
         }
     });
 
-/*--------------- ANNOUNCE NEXT EVENT? ---------------*/
+/*--------------- ANNOUNCE EVENTS ---------------*/
 
 requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
@@ -74,9 +74,6 @@ fetch(requestURL)
     })
     .then(function (jsonObject) {
         const towndata = jsonObject["towns"];
-
-        /*const myTowns = towns.filter(x => x.name == "Preston" || x.name == "Soda Springs" || x.name == "Fish Haven");
-        console.log(myTowns);*/
 
         let event = document.createElement("div");
         let name = document.createElement("h2");
@@ -95,9 +92,6 @@ fetch(requestURL)
             i = 2;
             townName = "Fish Haven";
         };
-
-        console.log(town.textContent);
-        console.log(towndata);
 
         name.textContent = townName + " Events:";
         console.log(name);
