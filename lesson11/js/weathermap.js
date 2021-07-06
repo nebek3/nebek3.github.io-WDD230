@@ -66,30 +66,50 @@ fetch(apiForecast)
 
 /*--------------- ANNOUNCE NEXT EVENT? ---------------*/
 
-/*requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
 fetch(requestURL)
     .then(function (response) {
         return response.json();
     })
     .then(function (jsonObject) {
-        const towns = jsonObject["towns"];
+        const towndata = jsonObject["towns"];
 
-        const myTowns = towns.filter(x => x.name == "Preston" || x.name == "Soda Springs" || x.name == "Fish Haven");
-        console.log(myTowns);
-    
+        /*const myTowns = towns.filter(x => x.name == "Preston" || x.name == "Soda Springs" || x.name == "Fish Haven");
+        console.log(myTowns);*/
+
         let event = document.createElement("div");
         let name = document.createElement("h2");
-        let e = document.createElement("h3");
-        let p = document.createElement("p");
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+        let p3 = document.createElement("p");
 
-        name.textContent = town +"'s next event:";
-        e.textContent = myTowns.events[1];
-        p.textContent = `You won't want to miss ${e} this year! It's going to be an event like never before!`
+        let i = 6;
+        let townName = "Preston";
+
+        if(town.textContent == "Soda Springs") {
+            i = 0;
+            townName = "Soda Springs";
+        }
+        else if(town.textContent == "Fish Haven") {
+            i = 2;
+            townName = "Fish Haven";
+        };
+
+        console.log(town.textContent);
+        console.log(towndata);
+
+        name.textContent = townName + " Events:";
+        console.log(name);
+
+        p1.textContent = towndata[i].events[0];
+        p2.textContent = towndata[i].events[1];
+        p3.textContent = towndata[i].events[2];
 
         event.append(name);
-        event.append(e);
-        event.append(p);
+        event.append(p1);
+        event.append(p2);
+        event.append(p3);
 
-        document.querySelector("div.article").appendChild(event);
-    });*/
+        document.querySelector("div.events").appendChild(event);
+    });

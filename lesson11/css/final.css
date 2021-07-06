@@ -211,6 +211,11 @@ main h1 {
     border-radius: 10px;
     width: 100%;
 }
+.events {
+    border: solid slategray;
+    border-radius: 10px;
+    text-align: center;
+}
 /*----------STORM CENTER----------*/
 /*----------FORM----------*/
 form fieldset {
