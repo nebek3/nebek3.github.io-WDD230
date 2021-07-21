@@ -81,6 +81,21 @@ main div {
 #business {
     display: none;
 }
+#businessdirectory {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+#businessdirectory img {
+    width: 100%;
+    max-width: 182px;
+}
+#businessdirectory :hover {
+    box-shadow: #000075 0 0 15px;
+}
+#businessdirectory img:hover, #businessdirectory p:hover {
+    box-shadow: none;
+}
 .pagecontent {
     display: grid;
     grid-template-columns: 1fr;
@@ -158,6 +173,69 @@ main h2, main h3 {
 .logo:hover{
     box-shadow: #000075 0 0 10px;
 }
+form fieldset {
+    margin: 2rem auto 2rem auto;
+    border: 1px solid #3F0D12;
+    border-radius: 10px;
+    padding: .5rem 2%;
+    width: 90%;
+}
+form legend {
+    color: #3F0D12;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: #BF0603;
+    font-size: .8rem;
+}
+form div {
+    padding: 1rem 0 0 0;
+    max-width: 20rem;
+}
+form label.top input, form label.top select {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: 1px solid #3F0D12;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #000075;
+    width: 100%;
+    max-width: 20rem;
+    background-color: #F0EBD8;
+}
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #BF0603;
+}
+form input.submitBtn {
+    border: none;
+    background-color: #BF0603;
+    color: #F0EBD8;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 2rem;
+    width: 96%;
+    max-width: 20rem;
+}
+form label.top input:required {
+    border-left: 6px solid #3F0D12;
+}
+form label.top input:required:valid {
+    border-left: 6px solid #000075;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 
 
@@ -239,6 +317,11 @@ main h2, main h3 {
         grid-template-columns: 1fr 1fr 1fr;
         text-align: center;
     }
+    #businessdirectory {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+    }
     .pagecontent {
         grid-template-columns: 1fr 1fr;
     }
@@ -259,6 +342,9 @@ main h2, main h3 {
     }
     #joinbutton {
         width: 20%;
+    }
+    form fieldset {
+        width: 50%;
     }
 
 

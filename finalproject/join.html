@@ -35,6 +35,43 @@
 
             <h1>Network With Us</h1>
 
+            <form method="GET" action="thanks.html">
+
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label class="sbs">Business Start Date <input type="date" name="date"></label>
+                    <label class="top">Business Name* <input type="text" name="businessname" required></label>
+                    <label class="top">Business Type* <input type="text" name="businesstype" required></label>
+
+                    <label class="top">Office Location &#9662;
+                        <select name="region">
+                            <option value="">Select City</option>
+                            <option value="wendell">Wendell</option>
+                            <option value="gooding">Gooding</option>
+                            <option value="jerome">Jerome</option>
+                            <option value="hagerman">Hagerman</option>
+                            <option value="buhl">Buhl</option>
+                            <option value="twinfalls">Twin Falls</option>
+                        </select></label>
+
+                        <label class="top">Email* <input type="email" name="email" placeholder="business@gmail.com" required></label>
+                        <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">Full Name* <input type="text" name="name" pattern="[A-Za-z ]{5,}" required></label>
+                    <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
+                    <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                    <label class="top">ZIP Code <input type="number" name="ZIP"></label>
+                </fieldset>
+
+
+                <input type="submit" value="Submit My Application" class="submitBtn">
+
+            </form>
+
         </main>
 
         <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
