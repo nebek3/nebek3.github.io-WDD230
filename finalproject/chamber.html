@@ -28,7 +28,7 @@
                 <li><a href="join.html">Join</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <script src="js/final.js"></script>
+            <script src="js/chamber.js"></script>
         </nav>
 
         <main>
@@ -95,9 +95,18 @@
                     <p>Don't miss the parade, rides, and booths during this event!</p>
                 </div>
 
-                <div>
+                <div  class="weatherSummary">
                     <h3>Weather in Wendell</h3>
-                    <p>Current Weather</p>
+                        <p class="left" style="margin-top: 0;">Currently:</p>
+                        <p class="left">Temperature:</p>
+                        <p class="left">Wind Chill:</p>
+                        <p class="left">Humidity:</p>
+                        <p class="left">Wind Speed:</p>
+                        <p class="right"> <span id="current"></span></p>
+                        <p class="right"> <span id="temp"></span>&deg; F</p>
+                        <p class="right"> <span id="windchill"></span>&deg; F</p>
+                        <p class="right"> <span id="humidity"></span>%</p>
+                        <p class="right"> <span id="wind"></span> mph</p>
                 </div>
 
             </section>
@@ -107,6 +116,6 @@
         <footer>&copy; <span id="year"></span>| Alex Nebeker | Idaho | <a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
             <p class="update">Last Modified: <span id="lastmod"></span></p>
         </footer>
-        <script src=""></script>
+        <script src="js/chamber.js"></script>
         </body>
 </html>

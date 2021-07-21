@@ -234,21 +234,8 @@ form label.top input:required:valid {
     content: "";
     display: table;
     clear: both;
-  }
-
-
-
-
-
+}
 .weatherSummary {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    background: radial-gradient(white, lightblue);
-    padding: 1rem;
-    box-shadow: 0 0 15px;
-    opacity: .7;
-    border-radius: 20px;
     column-count: 2;
 }
 .weatherSummary h3 {
