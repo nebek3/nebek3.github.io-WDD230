@@ -9,10 +9,6 @@ body {
 main p, ul {
     font-family: 'Josefine Slab', serif;
 }
-#cityheader img{
-    margin: 2rem auto 2rem auto;
-    border: solid #000075;
-}
 header img {
     margin-left: auto;
     margin-right: auto;
@@ -90,7 +86,6 @@ main div {
     grid-template-columns: 1fr;
     align-content: center;
     vertical-align: auto;
-    text-align: center;
 }
 .pagecontent p {
     margin: 1rem 4rem 0 4rem;
@@ -132,6 +127,41 @@ main h2, main h3 {
     padding: 0;
     border: solid #3F0D12;
 }
+#contactsection :first-child, #contactsection :last-child {
+    display: none;
+}
+#contactsection div {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-content: center;
+}
+#joinbutton {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    padding: 0;
+}
+#joinbutton :hover {
+    border-radius: 30px;
+    background: radial-gradient(#F0EBD8, #BF0603);
+    box-shadow: #000075 0 0 15px;
+}
+#joinbutton h1 {
+    margin: 0;
+}
+#joinbutton a {
+    text-decoration: none;
+}
+.logo:hover{
+    box-shadow: #000075 0 0 10px;
+}
+
+
+
+
 .weatherSummary {
     position: absolute;
     top: 20px;
@@ -212,6 +242,29 @@ main h2, main h3 {
     .pagecontent {
         grid-template-columns: 1fr 1fr;
     }
+    #contactsection :first-child, #contactsection :last-child {
+        display: grid;
+    }
+    #contactsection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    #contactsection img {
+        max-width: 100%;
+    }
+    #contactsection div {
+        max-width: none;
+        margin: auto;
+    }
+    #joinbutton {
+        width: 20%;
+    }
+
+
+
+
+
     .fiveday {
         display: block;
     }
